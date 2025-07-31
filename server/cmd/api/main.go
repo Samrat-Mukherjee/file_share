@@ -1,7 +1,13 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+
+	"github.com/Samrat-Mukherjee/file_share/internals/api"
+)
 
 func main() {
-	fmt.Println("Samrat is the don")
+	router := api.NewRouter()
+	fmt.Println("port is running on :8080")
+	router.Run(":8080")
 }
